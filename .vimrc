@@ -60,6 +60,8 @@ Plug 'christoomey/vim-tmux-runner' " Vim-Tmux-Runner
 Plug 'terryma/vim-multiple-cursors' " Vim-Multiple-Cursors
 Plug 'lukaszb/vim-web-indent' " Vim-Web-Indent
 Plug 'scrooloose/nerdtree' " Nerdtree
+Plug 'scrooloose/syntastic' " Syntastic (linters)
+Plug 'mtscout6/syntastic-local-eslint.vim' " Syntastic use local eslint
 
 call plug#end()
 
@@ -76,4 +78,26 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Close vim if nerdtree is the only open window
+
+" [syntastic] settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+let g:syntastic_javascript_checkers = ['eslint']
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 
