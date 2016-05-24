@@ -48,6 +48,7 @@ nnoremap <leader>] :tabn<cr>
 
 " nerdtree shortcuts
 nnoremap <leader>b :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeFind<cr>
 
 " [vim-plug] section
 call plug#begin('~/.vim/plugged')
