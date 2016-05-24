@@ -72,7 +72,6 @@ let g:polyglot_disabled = ['javascript']
 let g:jsx_ext_required = 0 " JSX highlighting in .js files
 
 " [nerdtree] plugin settings
-autocmd vimenter * NERDTree " Automatically open a nerdtree when vim starts
 " > Open nerdtree when vim starts with no specified file
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
