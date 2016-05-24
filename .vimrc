@@ -62,6 +62,7 @@ Plug 'lukaszb/vim-web-indent' " Vim-Web-Indent
 Plug 'scrooloose/nerdtree' " Nerdtree
 Plug 'scrooloose/syntastic' " Syntastic (linters)
 Plug 'mtscout6/syntastic-local-eslint.vim' " Syntastic use local eslint
+Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
 
 call plug#end()
 
