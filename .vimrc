@@ -50,6 +50,10 @@ nnoremap <leader>] :tabn<cr>
 nnoremap <leader>b :NERDTreeToggle<cr>
 nnoremap <leader>n :NERDTreeFind<cr>
 
+" The Silver Searcher shortcuts
+nnoremap <leader><S-k> :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <leader>f :Ag 
+
 " [vim-plug] section
 call plug#begin('~/.vim/plugged')
 
@@ -101,4 +105,10 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+
+" [The Silver Searcher] settings
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
 
