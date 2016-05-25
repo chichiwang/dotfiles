@@ -77,6 +77,9 @@ let g:polyglot_disabled = ['javascript']
 " [vim-jsx] plugin settings
 let g:jsx_ext_required = 0 " JSX highlighting in .js files
 
+" [fzf] settings
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+
 " [nerdtree] plugin settings
 " > Open nerdtree when vim starts with no specified file
 autocmd StdinReadPre * let s:std_in=1
