@@ -3,6 +3,7 @@ syntax enable 	    " Enable syntax highlighting
 
 set tabstop=2 	    " Number of visual spaces per TAB
 set softtabstop=2   " Number of spaces in TAB when editing
+set shiftwidth=2    " Stop indenting a million spaces!
 set expandtab       " TABs are spaces
 
 set number 	    " Show line numbers
