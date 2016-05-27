@@ -1,3 +1,4 @@
+" <[VIM SETTINGS]>
 colorscheme molokai " Molokai color scheme found in ~/.vim/colors
 syntax enable 	    " Enable syntax highlighting
 
@@ -17,45 +18,26 @@ set showmatch       " Highlight matching [{()}]
 set incsearch       " Search as characters are entered
 set hlsearch 	    " Highlight matches
 
+let mapleader=" " " Set leader key to <space>
+
+autocmd VimResized * :wincmd = "automatically rebalance windows on vim resize
+
+" <[VIM BINDINGS]>
+" Highlight last inserted text
+nnoremap gv `[v`]
+
 " Turn off search highlighting with , + SPACE
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>/ :nohlsearch<CR>
 
 " Move vertically by visual line
 nnoremap j gj
 nnoremap k gk
 
-" Highlight last inserted text
-nnoremap gv `[v`]
-
-autocmd VimResized * :wincmd = "automatically rebalance windows on vim resize
-
-let mapleader=" "
-
 " Zoom a vim pane, <C-w>= to rebalance
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
-" Fuzzy File Finder shortcuts
-nnoremap <leader>p :FZF<cr>
-nnoremap <leader><S-p> :FZF ~<cr>
-
-" Vim Tmux Runner shortcuts
-nnoremap <leader>a :VtrAttachToPane<cr>
-nnoremap <leader>s :VtrSendCommand 
-
-" Vim tab shortcuts
-nnoremap <leader>[ :tabp<cr>
-nnoremap <leader>] :tabn<cr>
-
-" nerdtree shortcuts
-nnoremap <leader>b :NERDTreeToggle<cr>
-nnoremap <leader>n :NERDTreeFind<cr>
-
-" The Silver Searcher shortcuts
-nnoremap <leader><S-k> :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-nnoremap <leader>f :Ag 
-
-" [vim-plug] section
+" <[VIM PLUGINS]>
 call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot' " Multiple language packs bundled into one repository
@@ -73,6 +55,7 @@ Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
 
 call plug#end()
 
+" <[PLUGIN SETTINGS]>
 " Disable polyglot javascript
 let g:polyglot_disabled = ['javascript']
 
@@ -122,6 +105,28 @@ let g:NERDSpaceDelims = 1 " Spaces after comment delimiters
 let g:NERDCompactSexyComs = 1 " Prettified mult-line comments
 let g:NERDDefaultAlign = 'left' " Left-justify comment delimiters
 
+" <[PLUGIN BINDINGS]>
+" Fuzzy File Finder shortcuts
+nnoremap <leader>p :FZF<cr>
+nnoremap <leader><S-p> :FZF ~<cr>
+
+" Vim Tmux Runner shortcuts
+nnoremap <leader>a :VtrAttachToPane<cr>
+nnoremap <leader>s :VtrSendCommand 
+
+" Vim tab shortcuts
+nnoremap <leader>[ :tabp<cr>
+nnoremap <leader>] :tabn<cr>
+
+" nerdtree shortcuts
+nnoremap <leader>b :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeFind<cr>
+
+" The Silver Searcher shortcuts
+nnoremap <leader><S-k> :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <leader>f :Ag 
+
+" <[CUSTOM FUNCTIONALITY]>
 " Write files including parent directories
 function! s:MkNonExDir(file, buf)
   if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
