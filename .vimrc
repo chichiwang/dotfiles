@@ -37,6 +37,8 @@ nnoremap k gk
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
+set backspace=indent,eol,start " Backspace should always work as expected
+
 " <[VIM PLUGINS]>
 call plug#begin('~/.vim/plugged')
 
@@ -52,6 +54,7 @@ Plug 'scrooloose/syntastic' " Syntastic (linters)
 Plug 'scrooloose/nerdcommenter' " Nerd Commenter
 Plug 'mtscout6/syntastic-local-eslint.vim' " Syntastic use local eslint
 Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
+Plug 'thoughtbot/vim-rspec' " Vim-Rspec
 
 call plug#end()
 
@@ -59,20 +62,20 @@ call plug#end()
 " Disable polyglot javascript
 let g:polyglot_disabled = ['javascript']
 
-" [vim-jsx] plugin settings
+" Vim-JSX plugin settings
 let g:jsx_ext_required = 0 " JSX highlighting in .js files
 
-" [fzf] settings
+" FZF settings
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 
-" [nerdtree] plugin settings
+" Nerdtree plugin settings
 " > Open nerdtree when vim starts with no specified file
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " Close vim if nerdtree is the only open window
 
-" [syntastic] settings
+" Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -94,16 +97,19 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
-" [The Silver Searcher] settings
+" The Silver Searcher settings
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 endif
 
-" [Nerd Commenter] settings
+" Nerd Commenter settings
 let g:NERDSpaceDelims = 1 " Spaces after comment delimiters
 let g:NERDCompactSexyComs = 1 " Prettified mult-line comments
 let g:NERDDefaultAlign = 'left' " Left-justify comment delimiters
+
+" Vim Rspec settings
+let g:rspec_command = "call VtrSendCommand('bundle exec rspec {spec}')"
 
 " <[PLUGIN BINDINGS]>
 " Fuzzy File Finder shortcuts
@@ -125,6 +131,12 @@ nnoremap <leader>n :NERDTreeFind<cr>
 " The Silver Searcher shortcuts
 nnoremap <leader><S-k> :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <leader>f :Ag 
+
+" Vim-Rspec shortcuts
+map <Leader>rf :call RunCurrentSpecFile()<CR>
+map <Leader>rr :call RunNearestSpec()<CR>
+map <Leader>rl :call RunLastSpec()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
 
 " <[CUSTOM FUNCTIONALITY]>
 " Write files including parent directories
