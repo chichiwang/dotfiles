@@ -67,6 +67,7 @@ Plug 'terryma/vim-multiple-cursors' " Vim-Multiple-Cursors
 Plug 'lukaszb/vim-web-indent' " Vim-Web-Indent
 Plug 'scrooloose/nerdtree' " Nerdtree
 Plug 'scrooloose/syntastic' " Syntastic (linters)
+Plug 'scrooloose/nerdcommenter' " Nerd Commenter
 Plug 'mtscout6/syntastic-local-eslint.vim' " Syntastic use local eslint
 Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
 
@@ -115,6 +116,11 @@ if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 endif
+
+" [Nerd Commenter] settings
+let g:NERDSpaceDelims = 1 " Spaces after comment delimiters
+let g:NERDCompactSexyComs = 1 " Prettified mult-line comments
+let g:NERDDefaultAlign = 'left' " Left-justify comment delimiters
 
 " Write files including parent directories
 function! s:MkNonExDir(file, buf)
