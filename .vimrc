@@ -55,6 +55,7 @@ Plug 'scrooloose/nerdcommenter' " Nerd Commenter
 Plug 'mtscout6/syntastic-local-eslint.vim' " Syntastic use local eslint
 Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
 Plug 'thoughtbot/vim-rspec' " Vim-Rspec
+Plug 'Valloric/YouCompleteMe' " Autocomplete
 
 call plug#end()
 
