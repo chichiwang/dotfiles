@@ -112,6 +112,10 @@ let g:NERDDefaultAlign = 'left' " Left-justify comment delimiters
 " Vim Rspec settings
 let g:rspec_command = "call VtrSendCommand('bundle exec rspec {spec}')"
 
+" YouCompleteMe settings
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_register_as_syntastic_checker = 1
+
 " <[PLUGIN BINDINGS]>
 " Fuzzy File Finder shortcuts
 nnoremap <leader>p :FZF<cr>
