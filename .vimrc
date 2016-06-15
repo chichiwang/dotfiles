@@ -39,6 +39,9 @@ nnoremap <leader>= :wincmd =<cr>
 
 set backspace=indent,eol,start " Backspace should always work as expected
 
+" Tab bindings
+nnoremap <leader>t :tabedit<cr>
+
 " <[VIM PLUGINS]>
 call plug#begin('~/.vim/plugged')
 
