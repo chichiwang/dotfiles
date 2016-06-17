@@ -44,6 +44,11 @@ nnoremap <leader>t :tabedit<cr>
 nnoremap <leader><Right> :tabn<cr>
 nnoremap <leader><Left> :tabp<cr>
 
+" Write and Quit
+nnoremap <leader>w :w<cr>
+nnoremap <leader>qw :wq<cr>
+nnoremap <leader>qq :q!<cr>
+
 " <[VIM PLUGINS]>
 call plug#begin('~/.vim/plugged')
 
