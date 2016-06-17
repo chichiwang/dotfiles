@@ -118,6 +118,7 @@ endif
 let g:NERDSpaceDelims = 1 " Spaces after comment delimiters
 let g:NERDCompactSexyComs = 1 " Prettified mult-line comments
 let g:NERDDefaultAlign = 'left' " Left-justify comment delimiters
+let NERDTreeShowHidden=1 " Show hidden files and folders
 
 " Vim Rspec settings
 let g:rspec_command = "call VtrSendCommand('bundle exec rspec {spec}')"
