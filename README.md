@@ -4,6 +4,9 @@
 * [tmux](https://tmux.github.io/)
 * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 * [cmake](http://brewformulas.org/Cmake)
+* [ctags](http://ctags.sourceforge.net/)
+  * `brew install ctags` for OSX
+  * Add `export PATH="/usr/local/bin:$PATH"` to `.bash_profile` or `.zshrc` to let your shell know which ctags to use
 
 ## Installation
 
