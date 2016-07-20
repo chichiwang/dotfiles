@@ -174,3 +174,8 @@ augroup BWCCreateDir
   autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
 
+augroup rubypath
+  autocmd!
+  autocmd FileType ruby setlocal suffixesadd+=.rb
+augroup END
+
