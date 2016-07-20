@@ -66,6 +66,7 @@ Plug 'mtscout6/syntastic-local-eslint.vim' " Syntastic use local eslint
 Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
 Plug 'thoughtbot/vim-rspec' " Vim-Rspec
 Plug 'Valloric/YouCompleteMe' " Autocomplete
+Plug 'vim-ruby/vim-ruby' " Ensure the latest version of vim-ruby
 
 call plug#end()
 
