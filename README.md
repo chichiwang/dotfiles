@@ -5,9 +5,10 @@
 * [tmux plugin manager](https://github.com/tmux-plugins/tpm)
     * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
-* [cmake](http://brewformulas.org/Cmake)
+* [cmake](https://cmake.org/)
 * [ctags](http://ctags.sourceforge.net/)
   * `brew install ctags` for OSX
+  * `sudo apt-get install ctags` for linux
   * Add `export PATH="/usr/local/bin:$PATH"` to `.bash_profile` or `.zshrc` to let your shell know which ctags to use
 
 ## Installation
