@@ -2,6 +2,8 @@
 * [vim](http://www.vim.org/download.php)
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * [tmux](https://tmux.github.io/)
+* [tmux plugin manager](https://github.com/tmux-plugins/tpm)
+    * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 * [cmake](http://brewformulas.org/Cmake)
 * [ctags](http://ctags.sourceforge.net/)
