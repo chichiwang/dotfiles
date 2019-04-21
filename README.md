@@ -16,6 +16,11 @@ Ensure the following are installed:
 ## Setup
 To start using these dotfiles, copy the `.vim` directory, `.vimrc` file, and the `tmux.conf` file over to your home directory `~`.
 
+### Directory Colors
+To set up directory colors for your shell, copy the `.dir_colors` file to your home directory `~`.
+
+Add the script snippet found in [conf/dir_colors.rc](conf/dir_colors.rc) to your `.bashrc` or `.zshrc` file.
+
 ## Installation
 
 Inside vim:
