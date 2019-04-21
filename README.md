@@ -13,6 +13,11 @@ Ensure the following are installed:
   * `sudo apt-get install ctags` for linux
   * Add `export PATH="/usr/local/bin:$PATH"` to `.bash_profile` or `.zshrc` to let your shell know which ctags to use
 
+### Optional dependencies
+Optionally install the following:
+
+* [nvm](https://github.com/creationix/nvm)
+
 ## Setup
 To start using these dotfiles, copy the `.vim` directory, `.vimrc` file, and the `tmux.conf` file over to your home directory `~`.
 
@@ -23,6 +28,9 @@ Add the script snippet found in [conf/dir_colors.rc](conf/dir_colors.rc) to your
 
 ### Preserve SSH passphrase
 To preserve a ssh passphrase for your terminal session, add the snippet found in [conf/ssh_passphrase.rc](conf/ssh_passphrase.rc) to your `.bashrc` or `.zshrc` file.
+
+### Exposing nvm command
+To ensure that nvm loads on startup add the snippet found in [conf/nvm.rc](conf/nvm.rc) to your `.bashrc` or `.zshrc`.
 
 ## Installation
 
