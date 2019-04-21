@@ -34,6 +34,7 @@ To ensure that nvm loads on startup add the snippet found in [conf/nvm.rc](conf/
 
 ## Installation
 
+### Vim Plugins
 Inside vim:
 ```
 :source ~/.vimrc
