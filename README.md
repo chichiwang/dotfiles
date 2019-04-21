@@ -48,5 +48,6 @@ Bash:
 
 ## Special Instructions
 
+### OSX Tmux bindings
 Shift-UP and Shift-DOWN do not pass to Tmux bindings in the OSX terminal. In order to make it work, go into Terminal > Preferences > Keyboard (tab) and add bindings for SHIFT-UP and SHIFT-DOWN to send text: SHIFT-UP and SHIFT-DOWN respectively. Use this [page](http://superuser.com/questions/841391/os-x-terminal-eating-the-shift-key) as a guide.
 
