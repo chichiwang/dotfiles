@@ -21,6 +21,9 @@ To set up directory colors for your shell, copy the `.dir_colors` file to your h
 
 Add the script snippet found in [conf/dir_colors.rc](conf/dir_colors.rc) to your `.bashrc` or `.zshrc` file.
 
+### Preserve SSH passphrase
+To preserve a ssh passphrase for your terminal session, add the snippet found in [conf/ssh_passphrase.rc](conf/ssh_passphrase.rc) to your `.bashrc` or `.zshrc` file.
+
 ## Installation
 
 Inside vim:
