@@ -21,6 +21,11 @@ Optionally install the following:
 ## Setup
 To start using these dotfiles, copy the `.vim` directory, `.vimrc` file, and the `tmux.conf` file over to your home directory `~`.
 
+### Tmux
+If using `zsh` as your shell, uncomment the line in `.tmux.conf` that sets the default shell to `zsh`.
+
+If using any shell other than the system shell, set that shell as the tmux default instead.
+
 ### Directory Colors
 To set up directory colors for your shell, copy the `.dir_colors` file to your home directory `~`.
 
