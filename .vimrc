@@ -60,9 +60,8 @@ Plug 'christoomey/vim-tmux-runner' " Vim-Tmux-Runner
 Plug 'terryma/vim-multiple-cursors' " Vim-Multiple-Cursors
 Plug 'lukaszb/vim-web-indent' " Vim-Web-Indent
 Plug 'scrooloose/nerdtree' " Nerdtree
-Plug 'w0rp/ale' " Vim8 Async Linters
+Plug 'dense-analysis/ale' " Vim8 Async Linters
 Plug 'scrooloose/nerdcommenter' " Nerd Commenter
-Plug 'mtscout6/syntastic-local-eslint.vim' " Syntastic use local eslint
 Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
 Plug 'thoughtbot/vim-rspec' " Vim-Rspec
 Plug 'Valloric/YouCompleteMe' " Autocomplete
