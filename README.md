@@ -46,10 +46,8 @@ Inside vim:
 :PlugInstall 
 ```
 
-Bash:
-```
-~/.vim/plugged/YouCompleteMe/install.py --clang-completer
-```
+#### coc.vim
+Install the coc.vim [extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions) that will best benefit your workflow.
 
 ## Special Instructions
 

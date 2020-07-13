@@ -64,8 +64,9 @@ Plug 'dense-analysis/ale' " Vim8 Async Linters
 Plug 'scrooloose/nerdcommenter' " Nerd Commenter
 Plug 'rking/ag.vim' " The Silver Searcher plugin (requires the_silver_searcher)
 Plug 'thoughtbot/vim-rspec' " Vim-Rspec
-Plug 'Valloric/YouCompleteMe' " Autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocompletion
 Plug 'vim-ruby/vim-ruby' " Ensure the latest version of vim-ruby
+Plug 'artur-shaik/vim-javacomplete2' " JavaComplete2
 
 call plug#end()
 
@@ -105,12 +106,20 @@ let NERDTreeShowHidden=1 " Show hidden files and folders
 " Vim Rspec settings
 let g:rspec_command = "call VtrSendCommand('bundle exec rspec {spec}')"
 
-" YouCompleteMe settings
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_register_as_syntastic_checker = 1
-
 " Matchit - enable
 runtime macros/matchit.vim
+
+" coc.vim settings
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
 
 " <[PLUGIN BINDINGS]>
 " Fuzzy File Finder shortcuts
@@ -138,6 +147,10 @@ map <Leader>rf :call RunCurrentSpecFile()<CR>
 map <Leader>rr :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
+
+" JavaComplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
 
 " <[CUSTOM FUNCTIONALITY]>
 " Write files including parent directories
