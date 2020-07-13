@@ -8,6 +8,8 @@ Ensure the following are installed:
     * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 * [the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 * [cmake](https://cmake.org/)
+
+The `.vimrc` file now includes [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags) so the following may no longer be necessary if using vim:
 * [ctags](http://ctags.sourceforge.net/)
   * `brew install ctags` for OSX
   * `sudo apt-get install ctags` for linux

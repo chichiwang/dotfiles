@@ -67,6 +67,7 @@ Plug 'thoughtbot/vim-rspec' " Vim-Rspec
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocompletion
 Plug 'vim-ruby/vim-ruby' " Ensure the latest version of vim-ruby
 Plug 'artur-shaik/vim-javacomplete2' " JavaComplete2
+Plug 'ludovicchabant/vim-gutentags' " Automatic CTags
 
 call plug#end()
 
@@ -120,6 +121,9 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+
+" Gutentags status display setting
+set statusline+=%{gutentags#statusline()}
 
 " <[PLUGIN BINDINGS]>
 " Fuzzy File Finder shortcuts
