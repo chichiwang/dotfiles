@@ -1,5 +1,4 @@
 " <[VIM SETTINGS]>
-colorscheme molokai " Molokai color scheme found in ~/.vim/colors
 syntax enable 	    " Enable syntax highlighting
 
 set tabstop=2 	    " Number of visual spaces per TAB
@@ -86,6 +85,7 @@ if exists('+termguicolors')
 endif
 
 set background=dark
+let g:gruvbox_material_disable_italic_comment = 1
 let g:gruvbox_material_background = 'hard'
 colorscheme gruvbox-material
 
