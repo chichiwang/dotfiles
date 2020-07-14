@@ -52,6 +52,7 @@ nnoremap <leader>qq :q!<cr>
 " <[VIM PLUGINS]>
 call plug#begin('~/.vim/plugged')
 
+Plug 'sainnhe/gruvbox-material' " Color palettes
 Plug 'sheerun/vim-polyglot' " Multiple language packs bundled into one repository
 Plug 'christoomey/vim-tmux-navigator' " Vim-Tmux Navigator
 Plug 'jelera/vim-javascript-syntax' " Vim Enhanced Javascript Syntax
@@ -72,6 +73,22 @@ Plug 'ludovicchabant/vim-gutentags' " Automatic CTags
 call plug#end()
 
 " <[PLUGIN SETTINGS]>
+" Gruvbox colors settings
+if has('termguicolors')
+  set termguicolors
+endif
+
+" Gruvbox Enable True Colors
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+set background=dark
+let g:gruvbox_material_background = 'hard'
+colorscheme gruvbox-material
+
 " Disable polyglot javascript
 let g:polyglot_disabled = ['javascript']
 
