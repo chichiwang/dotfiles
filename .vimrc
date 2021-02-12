@@ -48,6 +48,9 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>qw :wq<cr>
 nnoremap <leader>qq :q!<cr>
 
+" Disable polyglot javascript
+let g:polyglot_disabled = ['javascript']
+
 " <[VIM PLUGINS]>
 call plug#begin('~/.vim/plugged')
 
@@ -88,9 +91,6 @@ set background=dark
 let g:gruvbox_material_disable_italic_comment = 1
 let g:gruvbox_material_background = 'hard'
 colorscheme gruvbox-material
-
-" Disable polyglot javascript
-let g:polyglot_disabled = ['javascript']
 
 " Vim-JSX plugin settings
 let g:jsx_ext_required = 0 " JSX highlighting in .js files
