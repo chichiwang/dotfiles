@@ -1,13 +1,15 @@
 " <[VIM SETTINGS]>
 syntax enable 	    " Enable syntax highlighting
 
+set hidden          " Set hidden buffer behavior
+
 set tabstop=2 	    " Number of visual spaces per TAB
 set softtabstop=2   " Number of spaces in TAB when editing
 set shiftwidth=2    " Stop indenting a million spaces!
 set expandtab       " TABs are spaces
 
-set number 	    " Show line numbers
-set showcmd  	    " Show command in bottom bar
+set number 	        " Show line numbers
+set showcmd  	      " Show command in bottom bar
 set cursorline      " Highlight current line
 filetype indent on  " Load filetype-specific indent files
 set wildmenu        " Visual autocomplete for command menu
@@ -15,9 +17,17 @@ set lazyredraw      " Redraw only when absolutely necessary
 set showmatch       " Highlight matching [{()}]
 
 set incsearch       " Search as characters are entered
-set hlsearch 	    " Highlight matches
+set hlsearch 	      " Highlight matches
 
-let mapleader=" " " Set leader key to <space>
+let mapleader=" "   " Set leader key to <space>
+
+" Create and set the swapfile directory
+silent !mkdir ~/.vim/swapfiles > /dev/null 2>&1
+set directory=~/.vim/swapfiles//
+
+" Create and set the backup directory
+silent !mkdir ~/.vim/backup > /dev/null 2>&1
+set backupdir=~/.vim/backup//
 
 autocmd VimResized * :wincmd = "automatically rebalance windows on vim resize
 
