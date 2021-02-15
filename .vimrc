@@ -81,6 +81,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Autocompletion
 Plug 'vim-ruby/vim-ruby' " Ensure the latest version of vim-ruby
 Plug 'artur-shaik/vim-javacomplete2' " JavaComplete2
 Plug 'ludovicchabant/vim-gutentags' " Automatic CTags
+Plug 'jlanzarotta/bufexplorer' " Buffer Explorer
 
 call plug#end()
 
@@ -129,13 +130,16 @@ endif
 let g:NERDSpaceDelims = 1 " Spaces after comment delimiters
 let g:NERDCompactSexyComs = 1 " Prettified mult-line comments
 let g:NERDDefaultAlign = 'left' " Left-justify comment delimiters
-let NERDTreeShowHidden=1 " Show hidden files and folders
+let NERDTreeShowHidden = 1 " Show hidden files and folders
 
 " Vim Rspec settings
 let g:rspec_command = "call VtrSendCommand('bundle exec rspec {spec}')"
 
 " Matchit - enable
 runtime macros/matchit.vim
+
+" Buffer Explorer settings
+let g:bufExplorerShowRelativePath = 1
 
 " coc.vim settings
 " use <tab> for trigger completion and navigate to the next complete item
