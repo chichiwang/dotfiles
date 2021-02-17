@@ -18,7 +18,8 @@ set showmatch       " Highlight matching [{()}]
 
 set incsearch       " Search as characters are entered
 set hlsearch 	      " Highlight matches
-set smartcase       " Set search to smartcase
+set ignorecase      " Ignore casing for search
+set smartcase       " Smartcase for search
 
 let mapleader=" "   " Set leader key to <space>
 
