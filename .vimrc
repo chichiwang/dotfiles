@@ -8,6 +8,8 @@ set softtabstop=2   " Number of spaces in TAB when editing
 set shiftwidth=2    " Stop indenting a million spaces!
 set expandtab       " TABs are spaces
 
+set foldcolumn=1    " Set the foldcolumn width to 1
+
 set number 	        " Show line numbers
 set showcmd  	      " Show command in bottom bar
 set cursorline      " Highlight current line
@@ -84,6 +86,7 @@ Plug 'vim-ruby/vim-ruby' " Ensure the latest version of vim-ruby
 Plug 'artur-shaik/vim-javacomplete2' " JavaComplete2
 Plug 'ludovicchabant/vim-gutentags' " Automatic CTags
 Plug 'jlanzarotta/bufexplorer' " Buffer Explorer
+Plug 'masukomi/vim-markdown-folding' " Foldexpr for markdown files
 
 call plug#end()
 
