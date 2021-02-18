@@ -1,29 +1,29 @@
 " <[VIM SETTINGS]>
-syntax enable 	    " Enable syntax highlighting
+syntax enable 	      " Enable syntax highlighting
 
-set hidden          " Set hidden buffer behavior
+set hidden            " Set hidden buffer behavior
 
-set tabstop=2 	    " Number of visual spaces per TAB
-set softtabstop=2   " Number of spaces in TAB when editing
-set shiftwidth=2    " Stop indenting a million spaces!
-set expandtab       " TABs are spaces
+set tabstop=2 	      " Number of visual spaces per TAB
+set softtabstop=2     " Number of spaces in TAB when editing
+set shiftwidth=2      " Stop indenting a million spaces!
+set expandtab         " TABs are spaces
 
-set foldcolumn=1    " Set the foldcolumn width to 1
+set number 	          " Show line numbers
+set showcmd  	        " Show command in bottom bar
+set cursorline        " Highlight current line
+filetype indent on    " Load filetype-specific indent files
+set wildmenu          " Visual autocomplete for command menu
+set lazyredraw        " Redraw only when absolutely necessary
+set showmatch         " Highlight matching [{()}]
+set foldcolumn=1      " Set the foldcolumn width to 1
+set clipboard=unnamed " Use the system clipboard with the unnamed register
 
-set number 	        " Show line numbers
-set showcmd  	      " Show command in bottom bar
-set cursorline      " Highlight current line
-filetype indent on  " Load filetype-specific indent files
-set wildmenu        " Visual autocomplete for command menu
-set lazyredraw      " Redraw only when absolutely necessary
-set showmatch       " Highlight matching [{()}]
+set incsearch         " Search as characters are entered
+set hlsearch 	        " Highlight matches
+set ignorecase        " Ignore casing for search
+set smartcase         " Smartcase for search
 
-set incsearch       " Search as characters are entered
-set hlsearch 	      " Highlight matches
-set ignorecase      " Ignore casing for search
-set smartcase       " Smartcase for search
-
-let mapleader=" "   " Set leader key to <space>
+let mapleader=" "     " Set leader key to <space>
 
 " Create and set the swapfile directory
 silent !mkdir ~/.vim/swapfiles > /dev/null 2>&1
