@@ -87,6 +87,7 @@ Plug 'artur-shaik/vim-javacomplete2' " JavaComplete2
 Plug 'ludovicchabant/vim-gutentags' " Automatic CTags
 Plug 'jlanzarotta/bufexplorer' " Buffer Explorer
 Plug 'masukomi/vim-markdown-folding' " Foldexpr for markdown files
+Plug 'kovisoft/slimv' " Superior Lisp Interaction Mode for Vim
 
 call plug#end()
 
