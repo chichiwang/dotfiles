@@ -1,5 +1,6 @@
 " <[VIM SETTINGS]>
 syntax enable 	      " Enable syntax highlighting
+set re=0            " Use new regular expression engine
 
 set hidden            " Set hidden buffer behavior
 
