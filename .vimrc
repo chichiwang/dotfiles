@@ -89,6 +89,7 @@ Plug 'ludovicchabant/vim-gutentags' " Automatic CTags
 Plug 'jlanzarotta/bufexplorer' " Buffer Explorer
 Plug 'masukomi/vim-markdown-folding' " Foldexpr for markdown files
 Plug 'kovisoft/slimv' " Superior Lisp Interaction Mode for Vim
+Plug 'luochen1990/rainbow' " Rainbow Parentheses Improved
 
 call plug#end()
 
@@ -252,6 +253,9 @@ map <Leader>ra :call RunAllSpecs()<CR>
 " JavaComplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 nmap <F5> <Plug>(JavaComplete-Imports-Add)
+
+" Rainbow Parentheses Improved
+let g:rainbow_active = 1
 
 " <[CUSTOM FUNCTIONALITY]>
 " Write files including parent directories
