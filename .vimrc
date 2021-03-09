@@ -1,6 +1,6 @@
 " <[VIM SETTINGS]>
 syntax enable 	      " Enable syntax highlighting
-set re=0            " Use new regular expression engine
+set re=0              " Use new regular expression engine
 
 set hidden            " Set hidden buffer behavior
 
@@ -145,6 +145,9 @@ let g:rspec_command = "call VtrSendCommand('bundle exec rspec {spec}')"
 
 " Matchit - enable
 runtime macros/matchit.vim
+
+" Slimv settings
+let g:paredit_electric_return = 0 " Disable electric return
 
 " Buffer Explorer settings
 let g:bufExplorerShowRelativePath = 1
