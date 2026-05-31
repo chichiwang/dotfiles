@@ -26,6 +26,27 @@ set smartcase         " Smartcase for search
 
 let mapleader=" "     " Set leader key to <space>
 
+" Use system clipboard (not primary selection)
+set clipboard=unnamedplus
+
+" Handle large paste operations smoothly
+set paste
+set synmaxcol=0
+
+" Optional: Disable syntax highlighting during paste
+function! PasteMode()
+    set paste
+    set synmaxcol=0
+endfunction
+
+function! NoPasteMode()
+    set nopaste
+    set synmaxcol=0
+endfunction
+
+nnoremap <leader>p :call PasteMode()<CR>
+nnoremap <leader>P :call NoPasteMode()<CR>
+
 " Create and set the swapfile directory
 silent !mkdir ~/.vim/swapfiles > /dev/null 2>&1
 set directory=~/.vim/swapfiles//
